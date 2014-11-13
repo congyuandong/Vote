@@ -23,7 +23,8 @@ def Institution(request):
 def Judge(request):
 	context = RequestContext(request)
 	context_dict = {}
-
+	JUDGE_objs = JUDGE.objects.order_by('sort')
+	context_dict['jueges'] = JUDGE_objs
 	return render_to_response('qdvote/judgeIntro.html',context_dict,context)
 
 #参选报名

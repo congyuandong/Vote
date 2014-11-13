@@ -11,3 +11,10 @@ urlpatterns = patterns('',
     url(r'^admin/', include(xadmin.site.urls)),
     url(r'^ueditor/',include('DjangoUeditor.urls' )),
 )
+
+if settings.DEBUG:
+	urlpatterns += patterns(
+		'django.views.static',
+		(r'media/(?P<path>.*)',
+		'serve',
+		{'document_root': settings.MEDIA_ROOT}),)
