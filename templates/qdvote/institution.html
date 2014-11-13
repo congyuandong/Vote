@@ -1,0 +1,79 @@
+{% extends "qdvote/base.html" %}
+{% load staticfiles %}
+{% block title %}组织机构{% endblock %}
+{% block body_block %}
+<div class="main">
+  <div class="left">
+    <div class="sigletitle">组织机构</div>
+    <ul class="listbox">
+      <li class="lititle">主办单位</li>
+      <li class="s1">
+        <div class="liimg">
+          <p>
+            <img src="{% static 'images/qinghuainvest.png'%}" />
+          </p>
+        </div>
+        <div class="lidetails">
+          <h3>
+            清大益讯（北京）投资管理有限公司
+            <a href="http://www.qinghuainvest.com/" target="_blank">http://www.qinghuainvest.com/</a>
+          </h3>
+          <p>
+            清大益讯（北京）投资管理有限公司（以下简称“清大益讯”）总部坐落在清华大学科技园，系一家由清华大学校友办发起，和近50名清华大学EMBA校友共同出资组建的中国场外市场综合服务集团化公司...
+            <a target="_blank" href="http://www.qinghuainvest.com/page/html/company.php" class="limore">More</a>
+          </p>
+        </div>
+      </li>
+      <li class="s1">
+        <div class="liimg">
+          <p>
+            <img src="{% static 'images/pbcsf.png'%}" />
+          </p>
+        </div>
+        <div class="lidetails">
+          <h3>
+            清华五道口
+            <a href="http://www.pbcsf.tsinghua.edu.cn/" target="_blank">http://www.pbcsf.tsinghua.edu.cn/</a>
+          </h3>
+          <p>
+            清华大学五道口金融学院诞生于2012年3月29日，由中国人民银行与清华大学合作，在中国人民银行研究生部的基础上建设而成，是清华大学第十七个学院...
+            <a target="_blank" href="http://www.pbcsf.tsinghua.edu.cn/about/about.html" class="limore">More</a>
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="right">
+    <div class="countdown">
+      <h1>距中国最具投资价值企业50强还有：</h1>
+      <div class="timing">
+        <div id="t_days" class="t_number">00</div>
+        <div id="t_hours" class="t_number">09</div>
+        <div id="t_mins" class="t_number">09</div>
+        <div id="t_secs" class="t_number">08</div>
+        <ul class="t_label">
+          <li>days</li>
+          <li>hours</li>
+          <li>mins</li>
+          <li>secs</li>
+        </ul>
+      </div>
+    </div>
+    <div class="onlinevote">
+      <a href="onlineVote.html">
+        <img src="{% static 'images/online_vote.png'%}" />
+      </a>
+    </div>
+    <div class="sponsor">
+      <div class="title">主办单位</div>
+      <a href="http://www.qinghuainvest.com/">
+        <img src="{% static 'images/qinghuainvest.png'%}"  />
+      </a>
+      <a href="http://www.pbcsf.tsinghua.edu.cn/">
+        <img src="{% static 'images/pbcsf.png'%}"  />
+      </a>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+{% endblock %}
