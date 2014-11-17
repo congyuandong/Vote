@@ -2,178 +2,24 @@
 {% load staticfiles %}
 {% block title %}评委介绍{% endblock %}
 {% block body_block %}
-<div class="main">
-  <div class="left">
-    <div class="sigletitle">评委介绍</div>
-    <ul class="listbox">
-      <li class="lititle">特邀嘉宾</li>
-      {% for juege in jueges%}
-      <li class="s2">
-        <div class="liimg">
-          <p>
-            <img src="/media/{{juege.image}}" />
-          </p>
-        </div>
-        <div class="lidetails">
-          <h3>{{juege.name}}</h3>
-          <p>{{juege.company}}</p>
-          <p>{{juege.position}}</p>
-        </div>
-      </li>
-      {% endfor %}
-      <!--li class="s2">
-      <div class="liimg">
-        <p>
-          <img src="{% static 'images/judge_1.jpg'%}" />
-        </p>
-      </div>
-      <div class="lidetails">
-        <h3>陈大同</h3>
-        <p>华山资本投资管理公司</p>
-        <p>创始合伙人、董事总经理</p>
-      </div>
-    </li>
+<div class="left">
+  <div class="sigletitle">评委介绍</div>
+  <ul class="listbox">
+    <li class="lititle">特邀嘉宾</li>
+    {% for juege in jueges%}
     <li class="s2">
       <div class="liimg">
         <p>
-          <img src="{% static 'images/judge_1.jpg'%}" />
+          <img src="/media/{{juege.image}}" />
         </p>
       </div>
       <div class="lidetails">
-        <h3>韩惠源</h3>
-        <p>硅谷天堂资产管理集团股份有限公司</p>
-        <p>合伙人、董事总经理</p>
+        <h3>{{juege.name}}</h3>
+        <p>{{juege.company}}</p>
+        <p>{{juege.position}}</p>
       </div>
     </li>
-    <li class="s2">
-      <div class="liimg">
-        <p>
-          <img src="{% static 'images/judge_1.jpg'%}" />
-        </p>
-      </div>
-      <div class="lidetails">
-        <h3>陈大同</h3>
-        <p>华山资本投资管理公司</p>
-        <p>创始合伙人、董事总经理</p>
-      </div>
-    </li>
-    <li class="s2">
-      <div class="liimg">
-        <p>
-          <img src="{% static 'images/judge_1.jpg'%}" />
-        </p>
-      </div>
-      <div class="lidetails">
-        <h3>陈大同</h3>
-        <p>华山资本投资管理公司</p>
-        <p>创始合伙人、董事总经理</p>
-      </div>
-    </li>
-    <li class="s2">
-      <div class="liimg">
-        <p>
-          <img src="{% static 'images/judge_1.jpg'%}" />
-        </p>
-      </div>
-      <div class="lidetails">
-        <h3>陈大同</h3>
-        <p>华山资本投资管理公司</p>
-        <p>创始合伙人、董事总经理</p>
-      </div>
-    </li>
-    <li class="s2">
-      <div class="liimg">
-        <p>
-          <img src="{% static 'images/judge_1.jpg'%}" />
-        </p>
-      </div>
-      <div class="lidetails">
-        <h3>陈大同</h3>
-        <p>华山资本投资管理公司</p>
-        <p>创始合伙人、董事总经理</p>
-      </div>
-    </li>
-    <li class="s2">
-      <div class="liimg">
-        <p>
-          <img src="{% static 'images/judge_1.jpg'%}" />
-        </p>
-      </div>
-      <div class="lidetails">
-        <h3>韩惠源</h3>
-        <p>硅谷天堂资产管理集团股份有限公司</p>
-        <p>合伙人、董事总经理</p>
-      </div>
-    </li>
-    <li class="s2">
-      <div class="liimg">
-        <p>
-          <img src="{% static 'images/judge_1.jpg'%}" />
-        </p>
-      </div>
-      <div class="lidetails">
-        <h3>陈大同</h3>
-        <p>华山资本投资管理公司</p>
-        <p>创始合伙人、董事总经理</p>
-      </div>
-    </li>
-    <li class="s2">
-      <div class="liimg">
-        <p>
-          <img src="{% static 'images/judge_1.jpg'%}" />
-        </p>
-      </div>
-      <div class="lidetails">
-        <h3>陈大同</h3>
-        <p>华山资本投资管理公司</p>
-        <p>创始合伙人、董事总经理</p>
-      </div>
-    </li>
-    <li class="s2">
-      <div class="liimg">
-        <p>
-          <img src="{% static 'images/judge_1.jpg'%}" />
-        </p>
-      </div>
-      <div class="lidetails">
-        <h3>陈大同</h3>
-        <p>华山资本投资管理公司</p>
-        <p>创始合伙人、董事总经理</p>
-      </div>
-    </li-->
+    {% endfor %}
   </ul>
-</div>
-<div class="right">
-  <div class="countdown">
-    <h1>距中国最具投资价值企业50强还有：</h1>
-    <div class="timing">
-      <div id="t_days" class="t_number">00</div>
-      <div id="t_hours" class="t_number">09</div>
-      <div id="t_mins" class="t_number">09</div>
-      <div id="t_secs" class="t_number">08</div>
-      <ul class="t_label">
-        <li>days</li>
-        <li>hours</li>
-        <li>mins</li>
-        <li>secs</li>
-      </ul>
-    </div>
-  </div>
-  <div class="onlinevote">
-    <a href="onlineVote.html">
-      <img src="{% static 'images/online_vote.png'%}" />
-    </a>
-  </div>
-  <div class="sponsor">
-    <div class="title">主办单位</div>
-    <a href="http://www.qinghuainvest.com/">
-      <img src="{% static 'images/qinghuainvest.png'%}"  />
-    </a>
-    <a href="http://www.pbcsf.tsinghua.edu.cn/">
-      <img src="{% static 'images/pbcsf.png'%}"  />
-    </a>
-  </div>
-</div>
-<div class="clearfix"></div>
 </div>
 {% endblock %}

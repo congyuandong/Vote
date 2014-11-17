@@ -28,8 +28,41 @@
         <img src="{% static 'images/banner.png'%}" />
       </div>
     </div>
-    {% block body_block %}
+    <div class="main cfix">
+      {% block body_block %}
     {% endblock %}
+      <div class="right">
+        <div class="countdown">
+          <h1>距中国最具投资价值企业50强还有：</h1>
+          <div class="timing">
+            <div id="t_days" class="t_number">00</div>
+            <div id="t_hours" class="t_number">09</div>
+            <div id="t_mins" class="t_number">09</div>
+            <div id="t_secs" class="t_number">08</div>
+            <ul class="t_label">
+              <li>days</li>
+              <li>hours</li>
+              <li>mins</li>
+              <li>secs</li>
+            </ul>
+          </div>
+        </div>
+        <div class="onlinevote">
+          <a href="/v/vote/" target='_blank'>
+            <img src="{% static 'images/online_vote.png'%}" />
+          </a>
+        </div>
+        <div class="sponsor">
+          <div class="title">主办单位</div>
+          <a href="http://www.qinghuainvest.com/">
+            <img src="{% static 'images/qinghuainvest.png'%}"  />
+          </a>
+          <a href="http://www.pbcsf.tsinghua.edu.cn/">
+            <img src="{% static 'images/pbcsf.png'%}"  />
+          </a>
+        </div>
+      </div>
+    </div>
     <div class="footer">
       <p>版权所有 Copyright(C)2013-2014清大益讯（北京）投资管理有限公司</p>
     </div>

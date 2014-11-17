@@ -40,3 +40,21 @@ def Contact(request):
 	context_dict = {}
 
 	return render_to_response('qdvote/contact.html',context_dict,context)
+
+def OnlineVote(request):
+	context = RequestContext(request)
+	context_dict = {}
+
+	return render_to_response('qdvote/onlineVote.html',context_dict,context)
+
+def Detail(request,id):
+	context = RequestContext(request)
+	context_dict = {}
+
+	return render_to_response('qdvote/details.html',context_dict,context)
+
+def Rank(request):
+	context = RequestContext(request)
+	context_dict = {}
+
+	return render_to_response('qdvote/rank.html',context_dict,context)

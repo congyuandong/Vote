@@ -1,230 +1,209 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>在线投票</title>
-  <link href="style/style.css" rel="stylesheet" charset="utf-8" />
-</head>
-<body class ="vote">
-  <!-- Modal -->
-  <div id="voteModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="voteModalLabel" aria-hidden="true">
-    <div class="modal-header">
-      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-      <h3 id="voteModalLabel">投票</h3>
-    </div>
-    <div class="modal-body">
-      <p><span>手机号:</span><input type="text" class="input-tel" /></p>
-      <p><span>验证码:</span><input type="text" class="input-ver" /><a href="" class="btn-get">获取</a></p>
-      <p></p>
-    </div>
-    <div class="modal-footer">
-      <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
-      <button class="btn btn-primary">确定</button>
-    </div>
+{% extends "qdvote/base_vote.html" %}
+{% load staticfiles %}
+{% block title %}在线投票{% endblock %}
+{% block body %}
+<!-- Modal -->
+<div id="voteModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="voteModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="voteModalLabel">投票</h3>
   </div>
+  <div class="modal-body">
+    <p>
+      <span>手机号:</span>
+      <input type="text" class="input-tel" />
+    </p>
+    <p>
+      <span>验证码:</span>
+      <input type="text" class="input-ver" />
+      <a href="" class="btn-get">获取</a>
+    </p>
+    <p></p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+    <button class="btn btn-primary">确定</button>
+  </div>
+</div>
 
-  <div class="header">
-    <div class="intro">
-      <div class="wrap">
-        <img src="images/vote_title.png" class="img" />
-        <p class="first">
-          清大益讯（北京）投资管理有限公司（以下简称“清大益讯”）致力于为中小企业对接资本市场牵线搭桥，为数十个中国场外OTC市场提供挂牌推荐金融服务及中国场外市场基金并购重组和投融资管理业务，如今己协助八十余家企业成功挂牌，并获得上海股交中心挂牌数量最多、最佳推荐机构的称号，在业内树立了良好的品牌。
-        </p>
+<div class="vmain cfix">
+  <div class="vright wrap">
+    <div class="vtitle">
+      <h1>
+        <span>运营服务业</span>
+      </h1>
+      <a href="/v/rank/" class="rank" target="_blank">查看总排名</a>
+    </div>
+    <ul class="vbox cfix">
+      <li>
+        <a href="details.html" target="_blank">
+          <img src="{% static 'images/logo.png'%}" />
+        </a>
+        <h2>xxxx有限公司</h2>
         <p>
-          为构建中国高成长中小企业的融资绿色通道、拓宽中小企业的融资贷款渠道搭建平台，清大益讯特发起“中国场外市场最具投资价值企业”评选活动，望为探讨中国高成长企业的发展趋势、帮助中国中小企业成长试航。
+          <span >票数:1112</span>
+          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
         </p>
+      </li>
+      <li>
+        <a href="details.html" target="_blank">
+          <img src="{% static 'images/pbcsf.png'%}" />
+        </a>
+        <h2>xxxx有限公司</h2>
         <p>
-          “中国场外市场最具投资价值企业”评选活动由清大益讯和清华金融评论联合举办，对参选企业进行层级审核，分别通过前期材料审核、权威专家打分和网络票选，评选出场外市场“最具投资价值企业”和“最具发展企业”，将于2015年1月在北京举办颁奖典礼。届时，中国最具发展潜力的企业将齐聚一堂，共同探讨解决企业在发展、管理、融资、上市等过程中各种疑难问题。
+          <span >票数:1112</span>
+          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
         </p>
-      </div>
-    </div>
+      </li>
+      <li>
+        <a href="details.html" target="_blank">
+          <img src="{% static 'images/logo.png'%}" />
+        </a>
+        <h2>xxxx有限公司</h2>
+        <p>
+          <span >票数:1112</span>
+          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
+        </p>
+      </li>
+      <li>
+        <a href="details.html" target="_blank">
+          <img src="{% static 'images/logo.png'%}" />
+        </a>
+        <h2>xxxx有限公司</h2>
+        <p>
+          <span >票数:1112</span>
+          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
+        </p>
+      </li>
+      <li>
+        <a href="details.html" target="_blank">
+          <img src="{% static 'images/logo.png'%}" />
+        </a>
+        <h2>xxxx有限公司</h2>
+        <p>
+          <span >票数:1112</span>
+          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
+        </p>
+      </li>
+      <li>
+        <a href="details.html" target="_blank">
+          <img src="{% static 'images/logo.png'%}" />
+        </a>
+        <h2>xxxx有限公司</h2>
+        <p>
+          <span >票数:1112</span>
+          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
+        </p>
+      </li>
+      <li>
+        <a href="details.html" target="_blank">
+          <img src="{% static 'images/logo.png'%}" />
+        </a>
+        <h2>xxxx有限公司</h2>
+        <p>
+          <span >票数:1112</span>
+          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
+        </p>
+      </li>
+      <li>
+        <a href="details.html" target="_blank">
+          <img src="{% static 'images/logo.png'%}" />
+        </a>
+        <h2>xxxx有限公司</h2>
+        <p>
+          <span >票数:1112</span>
+          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
+        </p>
+      </li>
+      <li>
+        <a href="details.html" target="_blank">
+          <img src="{% static 'images/logo.png'%}" />
+        </a>
+        <h2>xxxx有限公司xxxx有限公司xxxx有限公司xxxx有限公司</h2>
+        <p>
+          <span >票数:1112</span>
+          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
+        </p>
+      </li>
+      <li>
+        <a href="details.html" target="_blank">
+          <img src="{% static 'images/logo.png'%}" />
+        </a>
+        <h2>xxxx有限公司</h2>
+        <p>
+          <span >票数:1112</span>
+          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
+        </p>
+      </li>
+      <li>
+        <a href="details.html" target="_blank">
+          <img src="{% static 'images/pbcsf.png'%}" />
+        </a>
+        <h2>xxxx有限公司</h2>
+        <p>
+          <span >票数:1112</span>
+          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
+        </p>
+      </li>
+      <li>
+        <a href="details.html" target="_blank">
+          <img src="{% static 'images/logo.png'%}" />
+        </a>
+        <h2>xxxx有限公司</h2>
+        <p>
+          <span >票数:1112</span>
+          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
+        </p>
+      </li>
+      <li>
+        <a href="details.html" target="_blank">
+          <img src="{% static 'images/logo.png'%}" />
+        </a>
+        <h2>xxxx有限公司</h2>
+        <p>
+          <span >票数:1112</span>
+          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
+        </p>
+      </li>
+      <li>
+        <a href="details.html" target="_blank">
+          <img src="{% static 'images/logo.png'%}" />
+        </a>
+        <h2>xxxx有限公司</h2>
+        <p>
+          <span >票数:1112</span>
+          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
+        </p>
+      </li>
+    </ul>
   </div>
-  <div class="vmain cfix">
-    <div class="vright wrap">
-      <div class="vtitle">
-        <h1>
-          <span>运营服务业</span>
-        </h1>
-        <a href="rank.html" class="rank" target="_blank">查看总排名</a>
-      </div>
-      <ul class="vbox cfix">
-        <li>
-          <a href="details.html" target="_blank">
-            <img src="images/logo.png" />
-          </a>
-          <h2>xxxx有限公司</h2>
-          <p>
-            <span >票数:1112</span>
-            <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
-          </p>
-        </li>
-        <li>
-          <a href="details.html" target="_blank">
-            <img src="images/pbcsf.png" />
-          </a>
-          <h2>xxxx有限公司</h2>
-          <p>
-            <span >票数:1112</span>
-             <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
-          </p>
-        </li>
-        <li>
-          <a href="details.html" target="_blank">
-            <img src="images/logo.png" />
-          </a>
-          <h2>xxxx有限公司</h2>
-          <p>
-            <span >票数:1112</span>
-             <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
-          </p>
-        </li>
-        <li>
-          <a href="details.html" target="_blank">
-            <img src="images/logo.png" />
-          </a>
-          <h2>xxxx有限公司</h2>
-          <p>
-            <span >票数:1112</span>
-             <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
-          </p>
-        </li>
-        <li>
-          <a href="details.html" target="_blank">
-            <img src="images/logo.png" />
-          </a>
-          <h2>xxxx有限公司</h2>
-          <p>
-            <span >票数:1112</span>
-             <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
-          </p>
-        </li>
-        <li>
-          <a href="details.html" target="_blank">
-            <img src="images/logo.png" />
-          </a>
-          <h2>xxxx有限公司</h2>
-          <p>
-            <span >票数:1112</span>
-             <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
-          </p>
-        </li>
-        <li>
-          <a href="details.html" target="_blank">
-            <img src="images/logo.png" />
-          </a>
-          <h2>xxxx有限公司</h2>
-          <p>
-            <span >票数:1112</span>
-             <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
-          </p>
-        </li>
-        <li>
-          <a href="details.html" target="_blank">
-            <img src="images/logo.png" />
-          </a>
-          <h2>xxxx有限公司</h2>
-          <p>
-            <span >票数:1112</span>
-             <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
-          </p>
-        </li>
-        <li>
-          <a href="details.html" target="_blank">
-            <img src="images/logo.png" />
-          </a>
-          <h2>xxxx有限公司xxxx有限公司xxxx有限公司xxxx有限公司</h2>
-          <p>
-            <span >票数:1112</span>
-             <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
-          </p>
-        </li>
-        <li>
-          <a href="details.html" target="_blank">
-            <img src="images/logo.png" />
-          </a>
-          <h2>xxxx有限公司</h2>
-          <p>
-            <span >票数:1112</span>
-             <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
-          </p>
-        </li>
-        <li>
-          <a href="details.html" target="_blank">
-            <img src="images/pbcsf.png" />
-          </a>
-          <h2>xxxx有限公司</h2>
-          <p>
-            <span >票数:1112</span>
-             <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
-          </p>
-        </li>
-        <li>
-          <a href="details.html" target="_blank">
-            <img src="images/logo.png" />
-          </a>
-          <h2>xxxx有限公司</h2>
-          <p>
-            <span >票数:1112</span>
-             <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
-          </p>
-        </li>
-        <li>
-          <a href="details.html" target="_blank">
-            <img src="images/logo.png" />
-          </a>
-          <h2>xxxx有限公司</h2>
-          <p>
-            <span >票数:1112</span>
-             <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
-          </p>
-        </li>
-        <li>
-          <a href="details.html" target="_blank">
-            <img src="images/logo.png" />
-          </a>
-          <h2>xxxx有限公司</h2>
-          <p>
-            <span >票数:1112</span>
-             <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
-          </p>
-        </li>
-      </ul>
-    </div>
-    <div class="vleft">
-      <ul class="sidenav cfix">
-        <li>
-          <a href="">大型企业大型企业</a>
-        </li>
-        <li class="active">
-          <a href="">中型企业大型</a>
-        </li>
-        <li>
-          <a href="">小型企业大型</a>
-        </li>
-        <li>
-          <a href="">微型企业大</a>
-        </li>
-        <li>
-          <a href="">大型企业大型企</a>
-        </li>
-        <li>
-          <a href="">中型企业大型企业大型企业</a>
-        </li>
-        <li>
-          <a href="">小型企业大型企业</a>
-        </li>
-        <li>
-          <a href="">微型企业大</a>
-        </li>
-      </ul>
-    </div>
+  <div class="vleft">
+    <ul class="sidenav cfix">
+      <li>
+        <a href="">大型企业大型企业</a>
+      </li>
+      <li class="active">
+        <a href="">中型企业大型</a>
+      </li>
+      <li>
+        <a href="">小型企业大型</a>
+      </li>
+      <li>
+        <a href="">微型企业大</a>
+      </li>
+      <li>
+        <a href="">大型企业大型企</a>
+      </li>
+      <li>
+        <a href="">中型企业大型企业大型企业</a>
+      </li>
+      <li>
+        <a href="">小型企业大型企业</a>
+      </li>
+      <li>
+        <a href="">微型企业大</a>
+      </li>
+    </ul>
   </div>
-  <div class="footer">
-    <p>版权所有 Copyright(C)2013-2014清大益讯（北京）投资管理有限公司</p>
-  </div>
-  <script type="text/javascript" src="script/jquery.min.js"></script>
-  <script type="text/javascript" src="script/modal.js"></script>
-  <script type="text/javascript" src="script/script.js"></script>
-</body>
-</html>
+</div>
+{% endblock %}

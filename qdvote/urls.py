@@ -10,5 +10,5 @@ urlpatterns = patterns('',
 	url(r'^contact/', views.Contact, name='Contact'),
 	url(r'^vote/', views.OnlineVote, name='OnlineVote'),
 	url(r'^detail/(.+)', views.Detail, name='Detail'),
-	url(r'^rank/', views.Contact, name='Contact'),
+	url(r'^rank/', views.Rank, name='Rank'),
 	)

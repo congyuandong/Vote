@@ -1,118 +1,91 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>总排名</title>
-  <link href="style/style.css" rel="stylesheet" charset="utf-8" />
-</head>
-<body class ="vote">
-  <div class="header">
-    <div class="intro">
-      <div class="wrap">
-        <img src="images/vote_title.png" class="img" />
-        <p class="first">
-          清大益讯（北京）投资管理有限公司（以下简称“清大益讯”）致力于为中小企业对接资本市场牵线搭桥，为数十个中国场外OTC市场提供挂牌推荐金融服务及中国场外市场基金并购重组和投融资管理业务，如今己协助八十余家企业成功挂牌，并获得上海股交中心挂牌数量最多、最佳推荐机构的称号，在业内树立了良好的品牌。
-        </p>
-        <p>
-          为构建中国高成长中小企业的融资绿色通道、拓宽中小企业的融资贷款渠道搭建平台，清大益讯特发起“中国场外市场最具投资价值企业”评选活动，望为探讨中国高成长企业的发展趋势、帮助中国中小企业成长试航。
-        </p>
-        <p>
-          “中国场外市场最具投资价值企业”评选活动由清大益讯和清华金融评论联合举办，对参选企业进行层级审核，分别通过前期材料审核、权威专家打分和网络票选，评选出场外市场“最具投资价值企业”和“最具发展企业”，将于2015年1月在北京举办颁奖典礼。届时，中国最具发展潜力的企业将齐聚一堂，共同探讨解决企业在发展、管理、融资、上市等过程中各种疑难问题。
-        </p>
-      </div>
-    </div>
+{% extends "qdvote/base_vote.html" %}
+{% load staticfiles %}
+{% block title %}总排名{% endblock %}
+{% block body %}
+<div class="vmain cfix">
+  <div class="vright wrap">
+    <div class="rtitle"></div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>排名</th>
+          <th>企业名称</th>
+          <th>票数</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>清大益讯（北京）投资管理有限公司</td>
+          <td>12137</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>清大益讯有限公司</td>
+          <td>12011</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>清大益讯（北京）</td>
+          <td>11972</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>清大益讯（北京）</td>
+          <td>11644</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>清大益讯（北京）投资管理有限公司</td>
+          <td>11273</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>清大益讯（北京）投资管理</td>
+          <td>11256</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>清大益讯（北京）投资</td>
+          <td>11027</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>清大益讯（北京）投资</td>
+          <td>10906</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>清大益讯有限公司</td>
+          <td>10527</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>清大益讯（北京）投资管理有限公司</td>
+          <td>11273</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>清大益讯（北京）投资管理</td>
+          <td>11256</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>清大益讯（北京）投资</td>
+          <td>11027</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>清大益讯（北京）投资</td>
+          <td>10906</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>清大益讯有限公司</td>
+          <td>10527</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  <div class="vmain cfix">
-    <div class="vright wrap">
-      <div class="rtitle"></div>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>排名</th>
-            <th>企业名称</th>
-            <th>票数</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>清大益讯（北京）投资管理有限公司</td>
-            <td>12137</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>清大益讯有限公司</td>
-            <td>12011</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>清大益讯（北京）</td>
-            <td>11972</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>清大益讯（北京）</td>
-            <td>11644</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>清大益讯（北京）投资管理有限公司</td>
-            <td>11273</td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>清大益讯（北京）投资管理</td>
-            <td>11256</td>
-          </tr>
-          <tr>
-            <td>7</td>
-            <td>清大益讯（北京）投资</td>
-            <td>11027</td>
-          </tr>
-          <tr>
-            <td>8</td>
-            <td>清大益讯（北京）投资</td>
-            <td>10906</td>
-          </tr>
-          <tr>
-            <td>9</td>
-            <td>清大益讯有限公司</td>
-            <td>10527</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>清大益讯（北京）投资管理有限公司</td>
-            <td>11273</td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>清大益讯（北京）投资管理</td>
-            <td>11256</td>
-          </tr>
-          <tr>
-            <td>7</td>
-            <td>清大益讯（北京）投资</td>
-            <td>11027</td>
-          </tr>
-          <tr>
-            <td>8</td>
-            <td>清大益讯（北京）投资</td>
-            <td>10906</td>
-          </tr>
-          <tr>
-            <td>9</td>
-            <td>清大益讯有限公司</td>
-            <td>10527</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="footer">
-    <p>版权所有 Copyright(C)2013-2014清大益讯（北京）投资管理有限公司</p>
-  </div>
-  <script type="text/javascript" src="script/jquery.min.js"></script>
-  <script type="text/javascript" src="script/script.js"></script>
-</body>
-</html>
+</div>
+{% endblock %}

@@ -2,130 +2,96 @@
 {% load staticfiles %}
 {% block title %}参选报名{% endblock %}
 {% block body_block %}
-<div class="main">
-  <div class="left">
-    <div class="sigletitle">参选报名</div>
-    <div class="flow">
-      <ul>
-        <li>2014.11.22</li>
-        <li>2014.11.22</li>
-        <li>2014.11.22</li>
-        <li>2014.11.22</li>
-      </ul>
+<div class="left">
+  <div class="sigletitle">参选报名</div>
+  <div class="flow">
+    <ul>
+      <li>2014.11.22</li>
+      <li>2014.11.22</li>
+      <li>2014.11.22</li>
+      <li>2014.11.22</li>
+    </ul>
+  </div>
+  <div class="download">
+    <a href="" class="blue">企业自荐表</a>
+    <a href=""  class="green">机构推荐表</a>
+  </div>
+  <div class="channel">
+    <div class="title">
+      <img src="{% static 'images/title_pxxz.png'%}" />
     </div>
-    <div class="download">
-      <a href="" class="blue">企业自荐表</a>
-      <a href=""  class="green">机构推荐表</a>
-    </div>
-    <div class="channel">
-      <div class="title">
-        <img src="{% static 'images/title_pxxz.png'%}" />
-      </div>
-      <div class="content">
-        <p> <strong>一、参选渠道</strong>
-          <br/>
-          1、企业自主报名
-          <br/>
-          2、全国各股交中心推荐
-        </p>
-        <p> <strong>二、参选资格</strong>
-          <br/>
-          1、在全国场外市场挂牌企业
-          <br/>
-          2、具有发展前景的高成长企业
-        </p>
-        <p>
-          <strong>三、评选指标</strong>
-          <br/>
-          1、公司所在行业及业务
-          <br/>
-          2、公司商业模式与竞争力
-          <br/>
-          3、公司财务现状与预测
-          <br/>
-          4、公司经营风险与规避措施
-        </p>
-      </div>
-    </div>
-    <div class="channel">
-      <div class="title">
-        <img src="{% static 'images/title_cxqy.png'%}" />
-      </div>
-      <div class="content">
-        <p>
-          市场推广：入围200强企业可获得在活动官网上展示企业的机会
-          <br/>
-          融资辅导：入围100强企业将有机会获得专业的融资指导
-          <br/>
-          媒体宣传：入围50强企业可借助本活动的媒体推广自身品牌
-          <br/>
-          融资机会：参选过程将为企业创造更多融资机会
-        </p>
-      </div>
-    </div>
-    <div class="channel">
-      <div class="title">
-        <img src="{% static 'images/title_pxlc.png'%}" />
-      </div>
-      <div class="content">
-        <p>
-          <span class="stage">第一阶段：报名</span>
-        </p>
-        <p>
-          在线提交报名资料，或下载报名表格发送至官方参选邮箱：
-          <a href="mailto:qinghuainvest@qinghuainvest.com" target="_blank" class="mail">qinghuainvest@qinghuainvest.com</a>
-        </p>
-        <p>
-          <span class="stage">第二阶段：初选</span>
-        </p>
-        <p>由组委会根据行业分类、财务综合数据进行评分和排名，产生前200强企业名单。开放网络票选平台，开始接受在线投票。</p>
-        <p>
-          <span class="stage">第三阶段：复评</span>
-        </p>
-        <p>
-          入围前200强的企业经过评委打分审核，组委会进行汇总排名，产生中国场外市场“最具投资价值企业”50强榜单和“最具发展企业”50强榜单
-        </p>
-        <p>
-          <span class="stage">第四阶段：终选&颁奖典礼</span>
-        </p>
-        <p>
-          汇总入围“最具投资价值企业”50强榜单和“最具发展企业”50强榜单的100家企业的财务综合数据、专家意见和在线投票结果，最终确定中国场外市场“最具投资价值企业”20强榜单和“最具发展企业”20强榜单。
-        </p>
-        <p class="stress">2015年1月将在北京举办隆重的颁奖盛会揭晓中国场外市场“最具投资价值企业”20强榜单和“最具发展企业”20强榜单。</p>
-      </div>
+    <div class="content">
+      <p> <strong>一、参选渠道</strong>
+        <br/>
+        1、企业自主报名
+        <br/>
+        2、全国各股交中心推荐
+      </p>
+      <p> <strong>二、参选资格</strong>
+        <br/>
+        1、在全国场外市场挂牌企业
+        <br/>
+        2、具有发展前景的高成长企业
+      </p>
+      <p>
+        <strong>三、评选指标</strong>
+        <br/>
+        1、公司所在行业及业务
+        <br/>
+        2、公司商业模式与竞争力
+        <br/>
+        3、公司财务现状与预测
+        <br/>
+        4、公司经营风险与规避措施
+      </p>
     </div>
   </div>
-  <div class="right">
-    <div class="countdown">
-      <h1>距中国最具投资价值企业50强还有：</h1>
-      <div class="timing">
-        <div id="t_days" class="t_number">00</div>
-        <div id="t_hours" class="t_number">09</div>
-        <div id="t_mins" class="t_number">09</div>
-        <div id="t_secs" class="t_number">08</div>
-        <ul class="t_label">
-          <li>days</li>
-          <li>hours</li>
-          <li>mins</li>
-          <li>secs</li>
-        </ul>
-      </div>
+  <div class="channel">
+    <div class="title">
+      <img src="{% static 'images/title_cxqy.png'%}" />
     </div>
-    <div class="onlinevote">
-      <a href="onlineVote.html">
-        <img src="{% static 'images/online_vote.png'%}" />
-      </a>
-    </div>
-    <div class="sponsor">
-      <div class="title">主办单位</div>
-      <a href="http://www.qinghuainvest.com/">
-        <img src="{% static 'images/qinghuainvest.png'%}"  />
-      </a>
-      <a href="http://www.pbcsf.tsinghua.edu.cn/">
-        <img src="{% static 'images/pbcsf.png'%}"  />
-      </a>
+    <div class="content">
+      <p>
+        市场推广：入围200强企业可获得在活动官网上展示企业的机会
+        <br/>
+        融资辅导：入围100强企业将有机会获得专业的融资指导
+        <br/>
+        媒体宣传：入围50强企业可借助本活动的媒体推广自身品牌
+        <br/>
+        融资机会：参选过程将为企业创造更多融资机会
+      </p>
     </div>
   </div>
-  <div class="clearfix"></div>
+  <div class="channel">
+    <div class="title">
+      <img src="{% static 'images/title_pxlc.png'%}" />
+    </div>
+    <div class="content">
+      <p>
+        <span class="stage">第一阶段：报名</span>
+      </p>
+      <p>
+        在线提交报名资料，或下载报名表格发送至官方参选邮箱：
+        <a href="mailto:qinghuainvest@qinghuainvest.com" target="_blank" class="mail">qinghuainvest@qinghuainvest.com</a>
+      </p>
+      <p>
+        <span class="stage">第二阶段：初选</span>
+      </p>
+      <p>由组委会根据行业分类、财务综合数据进行评分和排名，产生前200强企业名单。开放网络票选平台，开始接受在线投票。</p>
+      <p>
+        <span class="stage">第三阶段：复评</span>
+      </p>
+      <p>
+        入围前200强的企业经过评委打分审核，组委会进行汇总排名，产生中国场外市场“最具投资价值企业”50强榜单和“最具发展企业”50强榜单
+      </p>
+      <p>
+        <span class="stage">第四阶段：终选&颁奖典礼</span>
+      </p>
+      <p>
+        汇总入围“最具投资价值企业”50强榜单和“最具发展企业”50强榜单的100家企业的财务综合数据、专家意见和在线投票结果，最终确定中国场外市场“最具投资价值企业”20强榜单和“最具发展企业”20强榜单。
+      </p>
+      <p class="stress">2015年1月将在北京举办隆重的颁奖盛会揭晓中国场外市场“最具投资价值企业”20强榜单和“最具发展企业”20强榜单。</p>
+    </div>
+  </div>
 </div>
 {% endblock %}
