@@ -6,7 +6,13 @@ $(document).ready(function() {
   var len = $(".left").height();
   len = (len > 500) ? len : 500;
   $(".main").css("height", len);
-
+  var lenr = $(".vright").height();
+	var lenl = $(".sidenav").height() + 60;
+	if (lenl < lenr) {
+		$(".vright").css("height", lenr);
+		$(".vleft").css("height", lenr);
+	} else
+		$(".vmain").css("height", lenl);
   //设置倒计时
   setLastTime();
 

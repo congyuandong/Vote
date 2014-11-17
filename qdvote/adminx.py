@@ -18,6 +18,18 @@ class JUDGEAdmin(object):
 	search_fields = ['name']
 	list_editable = ['name', 'company', 'position', 'sort']
 
+class INDUSTRYAdmin(object):
+	list_display = ['name','sort']
+	search_fields = ['name']
+	list_editable = ['name','sort']
+
+class COMPANYAdmin(object):
+	list_display = ['name','industry','vote','sort']
+	search_fields = ['name']
+	list_editable = ['name','sort']
+	list_filter=['industry']
+
+
 class XadminUEditorWidget(UEditorWidget):
 	def __init__(self,**kwargs):
 		self.ueditor_options=kwargs
@@ -42,6 +54,8 @@ class UeditorPlugin(BaseAdminPlugin):
 		nodes.append(js)
 
 xadmin.site.register(JUDGE,JUDGEAdmin)
+xadmin.site.register(INDUSTRY,INDUSTRYAdmin)
+xadmin.site.register(COMPANY,COMPANYAdmin)
 xadmin.site.register(views.CommAdminView, GlobalSetting)
 xadmin.site.register_plugin(UeditorPlugin,DetailAdminView)
 xadmin.site.register_plugin(UeditorPlugin,ModelFormAdminView)
