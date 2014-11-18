@@ -508,7 +508,7 @@ input[type="text"]:focus{
   text-decoration: underline;
 }
 .vmain .vright .vbox{
-  min-height: 500px;
+  min-height: 220px;
   margin: 5px 0;
   padding-left: 6px;
 }

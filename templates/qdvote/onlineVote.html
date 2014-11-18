@@ -28,7 +28,31 @@
 
 <div class="vmain cfix">
   <div class="vright wrap">
-    <div class="vtitle">
+    {% for company in companys%}
+    <div class="vtitle" id="a{{company.industry.id}}" name="a{{company.industry.id}}">
+      <h1>
+        <span>{{company.industry.name}}</span>
+      </h1>
+      {% if forloop.counter == 1%}
+        <a href="/v/rank/" class="rank" target="_blank">查看总排名</a>
+      {% endif %}
+    </div>
+    <ul class="vbox cfix">
+      {% for c in company.company_list%}
+      <li>
+        <a href="/v/detail/0" target="_blank">
+          <img src="/media/{{c.image}}" />
+        </a>
+        <h2>{{c.name}}</h2>
+        <p>
+          <span >票数:{{c.vote}}</span>
+          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
+        </p>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+    <!--div class="vtitle">
       <h1>
         <span>运营服务业</span>
       </h1>
@@ -36,7 +60,7 @@
     </div>
     <ul class="vbox cfix">
       <li>
-        <a href="details.html" target="_blank">
+        <a href="/v/detail/0" target="_blank">
           <img src="{% static 'images/logo.png'%}" />
         </a>
         <h2>xxxx有限公司</h2>
@@ -45,164 +69,15 @@
           <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
         </p>
       </li>
-      <li>
-        <a href="details.html" target="_blank">
-          <img src="{% static 'images/pbcsf.png'%}" />
-        </a>
-        <h2>xxxx有限公司</h2>
-        <p>
-          <span >票数:1112</span>
-          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
-        </p>
-      </li>
-      <li>
-        <a href="details.html" target="_blank">
-          <img src="{% static 'images/logo.png'%}" />
-        </a>
-        <h2>xxxx有限公司</h2>
-        <p>
-          <span >票数:1112</span>
-          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
-        </p>
-      </li>
-      <li>
-        <a href="details.html" target="_blank">
-          <img src="{% static 'images/logo.png'%}" />
-        </a>
-        <h2>xxxx有限公司</h2>
-        <p>
-          <span >票数:1112</span>
-          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
-        </p>
-      </li>
-      <li>
-        <a href="details.html" target="_blank">
-          <img src="{% static 'images/logo.png'%}" />
-        </a>
-        <h2>xxxx有限公司</h2>
-        <p>
-          <span >票数:1112</span>
-          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
-        </p>
-      </li>
-      <li>
-        <a href="details.html" target="_blank">
-          <img src="{% static 'images/logo.png'%}" />
-        </a>
-        <h2>xxxx有限公司</h2>
-        <p>
-          <span >票数:1112</span>
-          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
-        </p>
-      </li>
-      <li>
-        <a href="details.html" target="_blank">
-          <img src="{% static 'images/logo.png'%}" />
-        </a>
-        <h2>xxxx有限公司</h2>
-        <p>
-          <span >票数:1112</span>
-          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
-        </p>
-      </li>
-      <li>
-        <a href="details.html" target="_blank">
-          <img src="{% static 'images/logo.png'%}" />
-        </a>
-        <h2>xxxx有限公司</h2>
-        <p>
-          <span >票数:1112</span>
-          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
-        </p>
-      </li>
-      <li>
-        <a href="details.html" target="_blank">
-          <img src="{% static 'images/logo.png'%}" />
-        </a>
-        <h2>xxxx有限公司xxxx有限公司xxxx有限公司xxxx有限公司</h2>
-        <p>
-          <span >票数:1112</span>
-          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
-        </p>
-      </li>
-      <li>
-        <a href="details.html" target="_blank">
-          <img src="{% static 'images/logo.png'%}" />
-        </a>
-        <h2>xxxx有限公司</h2>
-        <p>
-          <span >票数:1112</span>
-          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
-        </p>
-      </li>
-      <li>
-        <a href="details.html" target="_blank">
-          <img src="{% static 'images/pbcsf.png'%}" />
-        </a>
-        <h2>xxxx有限公司</h2>
-        <p>
-          <span >票数:1112</span>
-          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
-        </p>
-      </li>
-      <li>
-        <a href="details.html" target="_blank">
-          <img src="{% static 'images/logo.png'%}" />
-        </a>
-        <h2>xxxx有限公司</h2>
-        <p>
-          <span >票数:1112</span>
-          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
-        </p>
-      </li>
-      <li>
-        <a href="details.html" target="_blank">
-          <img src="{% static 'images/logo.png'%}" />
-        </a>
-        <h2>xxxx有限公司</h2>
-        <p>
-          <span >票数:1112</span>
-          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
-        </p>
-      </li>
-      <li>
-        <a href="details.html" target="_blank">
-          <img src="{% static 'images/logo.png'%}" />
-        </a>
-        <h2>xxxx有限公司</h2>
-        <p>
-          <span >票数:1112</span>
-          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
-        </p>
-      </li>
-    </ul>
+    </ul-->
   </div>
   <div class="vleft">
     <ul class="sidenav cfix">
+      {% for industry in industrys %}
       <li>
-        <a href="">大型企业大型企业</a>
+        <a href="#a{{industry.id}}">{{industry.name}}</a>
       </li>
-      <li class="active">
-        <a href="">中型企业大型</a>
-      </li>
-      <li>
-        <a href="">小型企业大型</a>
-      </li>
-      <li>
-        <a href="">微型企业大</a>
-      </li>
-      <li>
-        <a href="">大型企业大型企</a>
-      </li>
-      <li>
-        <a href="">中型企业大型企业大型企业</a>
-      </li>
-      <li>
-        <a href="">小型企业大型企业</a>
-      </li>
-      <li>
-        <a href="">微型企业大</a>
-      </li>
+      {% endfor %}
     </ul>
   </div>
 </div>

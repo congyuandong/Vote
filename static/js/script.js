@@ -16,6 +16,25 @@ $(document).ready(function() {
   //设置倒计时
   setLastTime();
 
+  //设置投票界面左侧导航的跟随效果
+  $(document).scroll(function(){
+  	if($('.sidenav.cfix').length > 0){
+  		//$('.sidenav.cfix').css('top',($(document).scrollTop() - 200) +"px");
+  		if($(document).scrollTop() > 760){
+  			$('.sidenav.cfix').css('top',($(document).scrollTop() - 760 + 20) +"px");
+  		}else{
+  			$('.sidenav.cfix').css('top',20 +"px");
+  		}
+  		$(".vtitle").each(function(index){
+      		if($(this).offset().top > $(window).scrollTop()){
+        		if(index > 0){
+          			$(".sidenav.cfix li:eq("+(index-1)+")").addClass("active").siblings().removeClass("active");
+        		}
+        	return false;
+      	}
+    });
+  	}
+  });
 
 });
 

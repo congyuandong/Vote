@@ -6,3 +6,9 @@
 *.pyc
 
 *.pyc
+
+*.pyc
+
+qdvote/models.pyc
+
+qdvote/views.pyc

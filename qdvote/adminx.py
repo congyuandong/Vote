@@ -26,8 +26,9 @@ class INDUSTRYAdmin(object):
 class COMPANYAdmin(object):
 	list_display = ['name','industry','vote','sort']
 	search_fields = ['name']
-	list_editable = ['name','sort']
+	list_editable = ['name','industry','sort']
 	list_filter=['industry']
+	style_fields  = {'detail':'ueditor'}
 
 
 class XadminUEditorWidget(UEditorWidget):
