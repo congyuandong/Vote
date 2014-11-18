@@ -13,6 +13,18 @@ class GlobalSetting(object):
 	#设置base_site.html的Title
 	site_title = '场外市场评选活动后台管理系统'
 
+	def get_site_menu(self):
+
+		return (
+            {'title': '清大益讯','menus':(
+                {'title': '评委管理', 'icon': 'fa fa-user', 'url': self.get_model_url(JUDGE, 'changelist')},
+                {'title': '行业分类', 'icon': 'fa fa-file', 'url': self.get_model_url(INDUSTRY, 'changelist')},
+                {'title': '参评企业', 'icon': 'fa fa-bank', 'url': self.get_model_url(COMPANY, 'changelist')},
+            )},
+        )
+
+
+
 class JUDGEAdmin(object):
 	list_display = ['name','company','position','sort']
 	search_fields = ['name']
@@ -64,8 +76,8 @@ class UeditorPlugin(BaseAdminPlugin):
 xadmin.site.register(JUDGE,JUDGEAdmin)
 xadmin.site.register(INDUSTRY,INDUSTRYAdmin)
 xadmin.site.register(COMPANY,COMPANYAdmin)
-xadmin.site.register(RANDOMCODE,RANDOMCODEAdmin)
-xadmin.site.register(VOTEPHONE,VOTEPHONEAdmin)
+#xadmin.site.register(RANDOMCODE,RANDOMCODEAdmin)
+#xadmin.site.register(VOTEPHONE,VOTEPHONEAdmin)
 xadmin.site.register(views.CommAdminView, GlobalSetting)
 xadmin.site.register_plugin(UeditorPlugin,DetailAdminView)
 xadmin.site.register_plugin(UeditorPlugin,ModelFormAdminView)

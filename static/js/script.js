@@ -4,7 +4,7 @@ var voteDay = 15;
 //左侧导航条偏移数量
 var offset_count = 0;
 //验证码发送间隔时间
-var getcode_time = 10;
+var getcode_time = 60;
 
 var vote_id = -1;
 
