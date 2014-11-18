@@ -11,4 +11,6 @@ urlpatterns = patterns('',
 	url(r'^vote/', views.OnlineVote, name='OnlineVote'),
 	url(r'^detail/(.+)', views.Detail, name='Detail'),
 	url(r'^rank/', views.Rank, name='Rank'),
+	url(r'^code/$',views.GetRandomCode, name='GetRandomCode'),
+	url(r'^vc/$',views.VoteCompany, name='VoteCompany'),
 	)

@@ -55,9 +55,10 @@ class COMPANY(models.Model):
 随机验证码
 '''
 class RANDOMCODE(models.Model):
-	tel = models.CharField(max_length=20,verbose_name='手机号码')
+	tel = models.CharField(max_length=20,verbose_name='手机号码',unique=True)
 	code = models.CharField(max_length=10,verbose_name='验证码')
 	time = models.DateTimeField(verbose_name='更新时间')
+	count = models.IntegerField(default=0,verbose_name='请求验证码的次数')
 
 	def __unicode__(self):
 		return self.tel
@@ -65,3 +66,18 @@ class RANDOMCODE(models.Model):
 	class Meta:
 		verbose_name = '验证码'
 		verbose_name_plural = '验证码管理'
+
+'''
+已经投过票的手机号
+'''
+class VOTEPHONE(models.Model):
+	tel = models.CharField(max_length=20,verbose_name='手机号码',unique=True)
+	time = models.DateTimeField(verbose_name='投票时间')
+	company = models.ForeignKey(COMPANY,verbose_name='投票公司')
+
+	def __unicode__(self):
+		return self.tel
+
+	class Meta:
+		verbose_name = '投票记录'
+		verbose_name_plural = '投票记录'

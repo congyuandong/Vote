@@ -30,6 +30,12 @@ class COMPANYAdmin(object):
 	list_filter=['industry']
 	style_fields  = {'detail':'ueditor'}
 
+class RANDOMCODEAdmin(object):
+	list_display = ['tel','code','time','count']
+
+class VOTEPHONEAdmin(object):
+	list_display = ['tel','time','company']
+
 
 class XadminUEditorWidget(UEditorWidget):
 	def __init__(self,**kwargs):
@@ -54,9 +60,12 @@ class UeditorPlugin(BaseAdminPlugin):
 		js += '<script type="text/javascript" src="%s"></script>' % (settings.STATIC_URL + "ueditor/ueditor.all.min.js")
 		nodes.append(js)
 
+
 xadmin.site.register(JUDGE,JUDGEAdmin)
 xadmin.site.register(INDUSTRY,INDUSTRYAdmin)
 xadmin.site.register(COMPANY,COMPANYAdmin)
+xadmin.site.register(RANDOMCODE,RANDOMCODEAdmin)
+xadmin.site.register(VOTEPHONE,VOTEPHONEAdmin)
 xadmin.site.register(views.CommAdminView, GlobalSetting)
 xadmin.site.register_plugin(UeditorPlugin,DetailAdminView)
 xadmin.site.register_plugin(UeditorPlugin,ModelFormAdminView)

@@ -6,23 +6,36 @@
 <div id="voteModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="voteModalLabel" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="voteModalLabel">投票</h3>
+    <h3 id="voteModalLabel">请输入真实的手机号</h3>
   </div>
   <div class="modal-body">
+    <div  id='alert_field'>  
+    </div>
+    <!--div class="alert alert-error">
+      <button type="button" class="close" data-dismiss="alert">&times;</button> <strong>Warning!</strong>
+      Best check yo self, you're not looking too good.
+    </div>
+    <div class="alert alert-info">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <strong>Warning!</strong>
+      Best check yo self, you're not looking too good.
+    </div-->
     <p>
       <span>手机号:</span>
-      <input type="text" class="input-tel" />
+      <input type="text" class="input-tel" id='phone'/>
     </p>
     <p>
       <span>验证码:</span>
-      <input type="text" class="input-ver" />
-      <a href="" class="btn-get">获取</a>
+      <input type="text" class="input-ver" id='code'/>
+      <a class="btn-get" id='getcode'>
+        <span id='getcode_span'>获取</span>
+      </a>
     </p>
     <p></p>
   </div>
   <div class="modal-footer">
     <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
-    <button class="btn btn-primary">确定</button>
+    <button class="btn btn-primary" id="btn_sure">确定</button>
   </div>
 </div>
 
@@ -34,48 +47,30 @@
         <span>{{company.industry.name}}</span>
       </h1>
       {% if forloop.counter == 1%}
-        <a href="/v/rank/" class="rank" target="_blank">查看总排名</a>
+      <a href="/v/rank/" class="rank" target="_blank">查看总排名</a>
       {% endif %}
     </div>
     <ul class="vbox cfix">
       {% for c in company.company_list%}
       <li>
-        <a href="/v/detail/0" target="_blank">
+        <a href="/v/detail/{{c.id}}" target="_blank">
           <img src="/media/{{c.image}}" />
         </a>
         <h2>{{c.name}}</h2>
         <p>
           <span >票数:{{c.vote}}</span>
-          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
+          <a role="button" class="btn_vote" data-toggle="modal" data="{{c.id}}"></a>
         </p>
       </li>
       {% endfor %}
     </ul>
     {% endfor %}
-    <!--div class="vtitle">
-      <h1>
-        <span>运营服务业</span>
-      </h1>
-      <a href="/v/rank/" class="rank" target="_blank">查看总排名</a>
-    </div>
-    <ul class="vbox cfix">
-      <li>
-        <a href="/v/detail/0" target="_blank">
-          <img src="{% static 'images/logo.png'%}" />
-        </a>
-        <h2>xxxx有限公司</h2>
-        <p>
-          <span >票数:1112</span>
-          <a href="#voteModal" role="button" class="btn_vote" data-toggle="modal"></a>
-        </p>
-      </li>
-    </ul-->
   </div>
   <div class="vleft">
     <ul class="sidenav cfix">
-      {% for industry in industrys %}
+      {% for company in companys%}
       <li>
-        <a href="#a{{industry.id}}">{{industry.name}}</a>
+        <a href="#a{{company.industry.id}}">{{company.industry.name}}</a>
       </li>
       {% endfor %}
     </ul>

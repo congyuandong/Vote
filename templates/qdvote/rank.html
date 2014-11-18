@@ -14,76 +14,13 @@
         </tr>
       </thead>
       <tbody>
+        {% for company in companys%}
         <tr>
-          <td>1</td>
-          <td>清大益讯（北京）投资管理有限公司</td>
-          <td>12137</td>
+          <td>{{forloop.counter}}</td>
+          <td>{{company.name}}</td>
+          <td>{{company.vote}}</td>
         </tr>
-        <tr>
-          <td>2</td>
-          <td>清大益讯有限公司</td>
-          <td>12011</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>清大益讯（北京）</td>
-          <td>11972</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>清大益讯（北京）</td>
-          <td>11644</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>清大益讯（北京）投资管理有限公司</td>
-          <td>11273</td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>清大益讯（北京）投资管理</td>
-          <td>11256</td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>清大益讯（北京）投资</td>
-          <td>11027</td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>清大益讯（北京）投资</td>
-          <td>10906</td>
-        </tr>
-        <tr>
-          <td>9</td>
-          <td>清大益讯有限公司</td>
-          <td>10527</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>清大益讯（北京）投资管理有限公司</td>
-          <td>11273</td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>清大益讯（北京）投资管理</td>
-          <td>11256</td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>清大益讯（北京）投资</td>
-          <td>11027</td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>清大益讯（北京）投资</td>
-          <td>10906</td>
-        </tr>
-        <tr>
-          <td>9</td>
-          <td>清大益讯有限公司</td>
-          <td>10527</td>
-        </tr>
+        {% endfor %}
       </tbody>
     </table>
   </div>
