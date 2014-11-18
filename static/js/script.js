@@ -51,7 +51,8 @@ $(document).ready(function() {
   		$('#voteModal').modal("show");
   		$('#phone').val('');
   		$('#code').val('');
-  		window.vote_id = $('.btn_vote').attr('data');
+  		$('#alert_field').html('');
+  		window.vote_id = $(this).attr('data');
   		var load_timeout = $.cookie('load_timeout');
 		if(load_timeout != 0 && load_timeout != null){
 			$('#getcode').addClass('disabled');
