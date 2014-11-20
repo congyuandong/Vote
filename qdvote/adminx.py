@@ -20,6 +20,7 @@ class GlobalSetting(object):
                 {'title': '评委管理', 'icon': 'fa fa-user', 'url': self.get_model_url(JUDGE, 'changelist')},
                 {'title': '行业分类', 'icon': 'fa fa-file', 'url': self.get_model_url(INDUSTRY, 'changelist')},
                 {'title': '参评企业', 'icon': 'fa fa-bank', 'url': self.get_model_url(COMPANY, 'changelist')},
+                {'title': '投票记录', 'icon': 'fa fa-inbox', 'url': self.get_model_url(COMPANY, 'changelist')},
             )},
         )
 
