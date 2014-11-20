@@ -21,19 +21,9 @@ $(document).ready(function() {
 		$(".vmain").css("height", lenl);
   //设置倒计时
   setLastTime();
+  //设置左侧导航的位置
+  setView();
 
-	/*投票页面左导航位置*/
-	var wvleft = $(".vleft").width();
-	if (wvleft > 0) {
-		var wbody = $("body").width(),
-			wvright = $(".vright").width();
-		if (wbody < (wvright + 2 * wvleft)) {
-			$(".vote").css("min-width", wvright + 2 * wvleft);
-			$(".vleft").css("left", 0);
-		} else {
-			$(".vleft").css("left", (wbody - wvright) / 2 - wvleft);
-		}
-	}
 
   //设置投票界面左侧导航的跟随效果
   $(document).scroll(function(){
@@ -94,6 +84,7 @@ $(document).ready(function() {
 	            status = data.status;
 	            if(status == 1){
 	            	alert('投票成功!感谢您的支持!');
+	            	$('#vote_no_'+window.vote_id).text('票数:'+(parseInt($('#vote_no_'+window.vote_id).text().split(':')[1])+1));
 	            }else if(status == 0){
 	            	alert('验证码错误或已失效');
 	            }else if(status == 2){
@@ -138,6 +129,25 @@ $(document).ready(function() {
   	});
 
   } 
+});
+
+function setView(){
+	/*投票页面左导航位置*/
+	var wvleft = $(".vleft").width();
+	if (wvleft > 0) {
+		var wbody = $("body").width(),
+			wvright = $(".vright").width();
+		if (wbody < (wvright + 2 * wvleft)) {
+			$(".vote").css("min-width", wvright + 2 * wvleft);
+			$(".vleft").css("left", 0);
+		} else {
+			$(".vleft").css("left", (wbody - wvright) / 2 - wvleft);
+		}
+	}
+}
+
+$(window).resize(function(){
+	setView();
 });
 
 //设置警告框内容和样式
