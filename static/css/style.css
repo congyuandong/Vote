@@ -14,6 +14,7 @@ body{
 }
 .vote{
   background: #408cd9 url(../images/bg.png) center top no-repeat  ;
+  min-width: 1000px;
 }
 .wrap{
   width: 1000px;
@@ -424,9 +425,9 @@ input[type="text"]:focus{
 .vmain .vleft{
   background: url(../images/snav_bg.png) right repeat-y;
   height: 500px;
-  width: 180px;
+  width: 160px;
   position: absolute;
-  left: -10px;
+  left: 15px;
   top: 790px;
 }
 .vmain .vleft:before{

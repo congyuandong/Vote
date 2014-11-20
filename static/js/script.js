@@ -22,6 +22,19 @@ $(document).ready(function() {
   //设置倒计时
   setLastTime();
 
+	/*投票页面左导航位置*/
+	var wvleft = $(".vleft").width();
+	if (wvleft > 0) {
+		var wbody = $("body").width(),
+			wvright = $(".vright").width();
+		if (wbody < (wvright + 2 * wvleft)) {
+			$(".vote").css("min-width", wvright + 2 * wvleft);
+			$(".vleft").css("left", 0);
+		} else {
+			$(".vleft").css("left", (wbody - wvright) / 2 - wvleft);
+		}
+	}
+
   //设置投票界面左侧导航的跟随效果
   $(document).scroll(function(){
   	if($('.sidenav.cfix').length > 0){
