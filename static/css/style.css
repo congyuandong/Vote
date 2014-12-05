@@ -609,6 +609,12 @@ input[type="text"]:focus{
   background: url(../images/rtitle.png);
   margin: 20px auto;
 }
+.vmain .vright .rtitle.one{
+  background: url(../images/rtitle0.png);
+}
+.vmain .vright .rtitle.two{
+  background: url(../images/rtitle1.png);
+}
 .vmain .vright .table{
   margin: 0 auto;
 }

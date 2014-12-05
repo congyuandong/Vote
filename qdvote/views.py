@@ -67,6 +67,10 @@ def OnlineVote(request,v_type):
 			companys.append({'industry':INDUSTRY_obj,'company_list':company_list})
 	context_dict['companys'] = companys
 	context_dict['v_type'] = v_type
+	if v_type == '0':
+		context_dict['title'] = '最具投资价值企业'
+	elif v_type == '1':
+		context_dict['title'] = '最佳创新成长企业'
 	if settings.DEBUG:
 		print context_dict
 	return render_to_response('qdvote/onlineVote.html',context_dict,context)
@@ -88,6 +92,10 @@ def Rank(request,v_type):
 	COMPANY_objs = COMPANY.objects.filter(vote_type = v_type).order_by('-vote')
 	context_dict['companys'] = COMPANY_objs
 	context_dict['v_type'] = v_type
+	if v_type == '0':
+		context_dict['title'] = '最具投资价值企业'
+	elif v_type == '1':
+		context_dict['title'] = '最佳创新成长企业'
 	return render_to_response('qdvote/rank.html',context_dict,context)
 
 #获取随机验证码

@@ -1,10 +1,14 @@
 {% extends "qdvote/base_vote.html" %}
 {% load staticfiles %}
-{% block title %}总排名{% endblock %}
+{% block title %}{{title}} | 总排名{% endblock %}
 {% block body %}
 <div class="vmain cfix">
   <div class="vright wrap">
-    <div class="rtitle"></div>
+    {% if v_type == '0' %}
+    <div class="rtitle one"></div>
+    {% elif v_type == '1' %}
+    <div class="rtitle two"></div>
+    {% endif %}
     <table class="table">
       <thead>
         <tr>
