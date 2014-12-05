@@ -86,6 +86,7 @@ class RANDOMCODE(models.Model):
 class VOTEPHONE(models.Model):
 	tel = models.CharField(max_length=20,verbose_name='手机号码',unique=True)
 	time = models.DateTimeField(verbose_name='投票时间')
+	vote_type = models.IntegerField(verbose_name="奖项类型",default=0,choices=VOTE_TYPE)
 	company = models.ForeignKey(COMPANY,verbose_name='投票公司')
 
 	def __unicode__(self):

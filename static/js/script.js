@@ -89,7 +89,7 @@ $(document).ready(function() {
 	            }else if(status == 0){
 	            	alert('验证码错误或已失效');
 	            }else if(status == 2){
-	            	alert('您已经投过票了，请勿重复投票');
+	            	alert('该类型的奖项您已经投过票了，请勿重复投票');
 	            }
 	        },
 	        error:function(date){

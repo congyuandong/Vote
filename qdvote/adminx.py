@@ -48,7 +48,7 @@ class RANDOMCODEAdmin(object):
 	list_display = ['tel','code','time','count']
 
 class VOTEPHONEAdmin(object):
-	list_display = ['tel','time','company']
+	list_display = ['tel','time','vote_type','company']
 
 
 class XadminUEditorWidget(UEditorWidget):

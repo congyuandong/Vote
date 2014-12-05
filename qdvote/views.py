@@ -129,16 +129,16 @@ def VoteCompany(request):
 		tel = request.GET.get('tel','')
 		code = request.GET.get('code','')
 		c_id = request.GET.get('id','')
-		print c_id
-		if T.CheckExist(VOTEPHONE,{'tel':tel}):
+		#print c_id
+		COMPANY_obj = COMPANY.objects.get(id = c_id)
+		if T.CheckExist(VOTEPHONE,{'tel':tel,'vote_type':COMPANY_obj.vote_type}):
 			response_dict['status'] = 2
 		elif CheckRandomCode(tel,code):
 			response_dict['status'] = 1
-			try:
-				COMPANY_obj = COMPANY.objects.get(id = c_id)
+			try:		
 				COMPANY_obj.vote += 1
 				COMPANY_obj.save()
-				VOTEPHONE_new = VOTEPHONE(tel = tel,time = datetime.now(),company = COMPANY_obj)
+				VOTEPHONE_new = VOTEPHONE(tel = tel,time = datetime.now(),company = COMPANY_obj,vote_type = COMPANY_obj.vote_type)
 				VOTEPHONE_new.save()
 			except COMPANY.DoesNotExist:
 				raise Http404
