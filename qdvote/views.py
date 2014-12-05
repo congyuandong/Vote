@@ -56,19 +56,17 @@ def VoteEntry(request):
 
 	return render_to_response('qdvote/voteEntry.html',context_dict,context)
 
-def OnlineVote(request):
+def OnlineVote(request,v_type):
 	context = RequestContext(request)
 	context_dict = {}
 	INDUSTRY_objs = INDUSTRY.objects.order_by('sort')
-	context_dict['industrys'] = INDUSTRY_objs
-	#COMPANY_objs = COMPANY.objects.all().annotate(dcount=Count('industry'))
-	#context_dict['companys'] = COMPANY_objs
 	companys = []
 	for INDUSTRY_obj in INDUSTRY_objs:
-		company_list = COMPANY.objects.filter(industry__exact = INDUSTRY_obj)
+		company_list = COMPANY.objects.filter(industry__exact = INDUSTRY_obj,vote_type = v_type)
 		if company_list:
 			companys.append({'industry':INDUSTRY_obj,'company_list':company_list})
-	context_dict['companys'] = companys 
+	context_dict['companys'] = companys
+	context_dict['v_type'] = v_type
 	if settings.DEBUG:
 		print context_dict
 	return render_to_response('qdvote/onlineVote.html',context_dict,context)
@@ -83,13 +81,13 @@ def Detail(request,id):
 		raise Http404
 	return render_to_response('qdvote/details.html',context_dict,context)
 
-def Rank(request):
+def Rank(request,v_type):
 	context = RequestContext(request)
 	context_dict = {}
 
-	COMPANY_objs = COMPANY.objects.order_by('-vote')
+	COMPANY_objs = COMPANY.objects.filter(vote_type = v_type).order_by('-vote')
 	context_dict['companys'] = COMPANY_objs
-
+	context_dict['v_type'] = v_type
 	return render_to_response('qdvote/rank.html',context_dict,context)
 
 #获取随机验证码
@@ -109,7 +107,7 @@ def GetRandomCode(request):
 				elif (datetime.now() - RANDOMCODE_objs[0].time).seconds < 60:
 					response_dict['status'] = 4
 				else:
-					#在第一次发送
+					#再第一次发送
 					if T.SendRandomCode(tel):
 						response_dict['status'] = 1
 					else:

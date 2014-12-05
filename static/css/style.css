@@ -654,6 +654,10 @@ input[type="text"]:focus{
 .vmain .vright .detail {
   padding: 10px 20px;
 }
+.vmain .vright .detail .video{
+  margin: 0px auto;
+  width: 600px;
+}
 .vmain .vright .detail p{
   font-family: "SimSun";
   line-height: 28px;

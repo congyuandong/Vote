@@ -33,6 +33,16 @@ class INDUSTRY(models.Model):
 		verbose_name = '行业'
 		verbose_name_plural = '行业分类'
 
+VOTE_TYPE = (
+	(0, u"最具投资价值企业"),
+    (1, u"最佳创新成长企业"),
+	)
+
+VOTE_STATUS = (
+	(0, u"投票中"),
+    (1, u"预投票"),
+	)
+
 class COMPANY(models.Model):
 	name = models.CharField(max_length=200,verbose_name='公司名称')
 	industry = models.ForeignKey(INDUSTRY,verbose_name='行业分类')
@@ -43,6 +53,9 @@ class COMPANY(models.Model):
 	detail = UEditorField(verbose_name='公司详细介绍',imagePath="ueditor/images/",
         filePath="ueditor/files/",settings=settings.UEDITOR_SETTINGS['config'],
 		upload_settings={'imageMaxSize':2048000},null=True,blank=True)
+	vote_type = models.IntegerField(verbose_name="奖项类型",default=0,choices=VOTE_TYPE)
+	vote_status = models.IntegerField(verbose_name="投票状态",default=0,choices=VOTE_STATUS)
+	video = models.CharField(verbose_name="视频编号",max_length=200)
 
 	def __unicode__(self):
 		return self.name

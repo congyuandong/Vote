@@ -47,7 +47,7 @@
         <span>{{company.industry.name}}</span>
       </h1>
       {% if forloop.counter == 1%}
-      <a href="/v/rank/" class="rank" target="_blank">查看总排名</a>
+      <a href="/v/rank/t{{v_type}}" class="rank" target="_blank">查看总排名</a>
       {% endif %}
     </div>
     <ul class="vbox cfix">
@@ -59,7 +59,11 @@
         <h2>{{c.name}}</h2>
         <p>
           <span id='vote_no_{{c.id}}'>票数:{{c.vote}}</span>
-          <a role="button" class="prebtn_vote" data-toggle="modal" data="{{c.id}}"></a>
+          {% if c.vote_status == 0%}
+            <a role="button" class="btn_vote" data-toggle="modal" data="{{c.id}}"></a>
+          {% elif c.vote_status == 1%}
+            <a role="button" class="prebtn_vote" data-toggle="modal" data="{{c.id}}"></a>
+          {% endif %}
         </p>
       </li>
       {% endfor %}

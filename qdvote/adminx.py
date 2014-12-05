@@ -27,9 +27,9 @@ class GlobalSetting(object):
 
 
 class JUDGEAdmin(object):
-	list_display = ['name','company','position','sort']
+	list_display = ['name','company','position','vote_type','sort']
 	search_fields = ['name']
-	list_editable = ['name', 'company', 'position', 'sort']
+	list_editable = ['name', 'company', 'position','sort']
 
 class INDUSTRYAdmin(object):
 	list_display = ['name','sort']
@@ -37,11 +37,12 @@ class INDUSTRYAdmin(object):
 	list_editable = ['name','sort']
 
 class COMPANYAdmin(object):
-	list_display = ['name','industry','vote','sort']
+	list_display = ['name','industry','vote_type','vote_status','video','vote','sort']
 	search_fields = ['name']
-	list_editable = ['name','industry','sort']
-	list_filter=['industry']
+	list_editable = ['name','industry','vote_type','vote_status','video','sort']
+	list_filter=['industry','vote_type','vote_status']
 	style_fields  = {'detail':'ueditor'}
+	list_per_page = 20
 
 class RANDOMCODEAdmin(object):
 	list_display = ['tel','code','time','count']

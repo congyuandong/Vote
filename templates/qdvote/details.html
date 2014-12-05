@@ -6,6 +6,9 @@
   <div class="vright wrap">
     <h2>{{company.name}}</h2>
     <div class="detail">
+      {% if company.video %}
+        <div id='plv_video' data='{{company.video}}' class="video"></div>
+      {% endif %}
       {% autoescape off %}
       {{company.detail}}
       {% endautoescape %}
