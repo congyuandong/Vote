@@ -216,19 +216,20 @@ input[type="text"]:focus{
   font-weight: bold;
   text-shadow: none;
 }
-.main .left .channel .content .ve .award1{
-  background-color: #cd61d1;
+.main .left .channel .content .ve .btn{
+  background-color: #4883CA;
+  background-image: -moz-linear-gradient(top, #4E8DD9, #457EC3);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#4E8DD9), to(#457EC3));
+  background-image: -webkit-linear-gradient(top, #4E8DD9, #457EC3);
+  background-image: -o-linear-gradient(top, #4E8DD9, #457EC3);
+  background-image: linear-gradient(to bottom, #4E8DD9, #457EC3);
+  background-repeat: repeat-x;
+  
 }
-.main .left .channel .content .ve .award2{
-  background-color: #a2cc44;
-}
-.main .left .channel .content .ve .award1:hover,
-.main .left .channel .content .ve .award1:focus{
-  background-color: #e16ce5;
-}
-.main .left .channel .content .ve .award2:hover,
-.main .left .channel .content .ve .award2:focus{
-  background-color: #b5e54c;
+.main .left .channel .content .ve .btn:hover,
+.main .left .channel .content .ve .btn:focus{
+  background-color: #FF7C00;
+  background-image:none;
 }
 
 .main .left .sigletitle{
