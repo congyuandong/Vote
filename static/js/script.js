@@ -179,7 +179,7 @@ function checkMobile(str){
 
 function setLastTime(){
 	var now = new Date();
-	var endDate = new Date(voteYear,voteMonth,voteDay);
+	var endDate = new Date(voteYear,voteMonth-1,voteDay,0,0,0);
 	var leftTime = endDate.getTime() - now.getTime();
 	if(leftTime>=0){
 		var leftsecond = parseInt(leftTime/1000);
