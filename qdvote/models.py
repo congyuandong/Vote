@@ -55,7 +55,7 @@ class COMPANY(models.Model):
 		upload_settings={'imageMaxSize':2048000},null=True,blank=True)
 	vote_type = models.IntegerField(verbose_name="奖项类型",default=0,choices=VOTE_TYPE)
 	vote_status = models.IntegerField(verbose_name="投票状态",default=0,choices=VOTE_STATUS)
-	video = models.CharField(verbose_name="视频编号",max_length=200)
+	video = models.CharField(verbose_name="视频编号",max_length=200,null=True,blank=True)
 
 	def __unicode__(self):
 		return self.name
@@ -84,7 +84,7 @@ class RANDOMCODE(models.Model):
 已经投过票的手机号
 '''
 class VOTEPHONE(models.Model):
-	tel = models.CharField(max_length=20,verbose_name='手机号码',unique=True)
+	tel = models.CharField(max_length=20,verbose_name='手机号码')
 	time = models.DateTimeField(verbose_name='投票时间')
 	vote_type = models.IntegerField(verbose_name="奖项类型",default=0,choices=VOTE_TYPE)
 	company = models.ForeignKey(COMPANY,verbose_name='投票公司')

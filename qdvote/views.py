@@ -95,14 +95,15 @@ def GetRandomCode(request):
 	response_dict = {}
 	if request.method == 'GET':
 		tel = request.GET.get('tel','')
+		vote_type = request.GET.get('vote_type','')
 		if len(tel) != 11:
 			response_dict['status'] = 0
-		elif T.CheckExist(VOTEPHONE,{'tel':tel}):
+		elif T.CheckExist(VOTEPHONE,{'tel':tel,'vote_type':vote_type}):
 			response_dict['status'] = 2
 		else:
 			RANDOMCODE_objs = RANDOMCODE.objects.filter(tel=tel)
 			if RANDOMCODE_objs:
-				if RANDOMCODE_objs[0].count >= 3:
+				if RANDOMCODE_objs[0].count >= 5:
 					response_dict['status'] = 3
 				elif (datetime.now() - RANDOMCODE_objs[0].time).seconds < 60:
 					response_dict['status'] = 4

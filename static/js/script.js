@@ -104,7 +104,7 @@ $(document).ready(function() {
   			return;
   		}
   		$.ajax({
-	        url:'/v/code/?tel='+$('#phone').val(),
+	        url:'/v/code/?tel='+$('#phone').val()+'&vote_type='+$(this).attr('data'),
 	        method:'get',
 	        dateType:'json',
 	        success:function(data){
@@ -114,7 +114,7 @@ $(document).ready(function() {
 	            }else if(status == 2){
 	            	set_alert('该手机号码已投票，请勿重复投票','alert-error');
 	            }else if(status == 3){
-	            	set_alert('该手机号码已获取验证码超过三次，请跟换其他手机号码进行投票','alert-error');
+	            	set_alert('该手机号码已获取验证码超过五次，请跟换其他手机号码进行投票','alert-error');
 	            }else if(status == 4){
 	            	set_alert('您的验证码仍然有效，请在60秒后再尝试','alert-info');
 	            }
