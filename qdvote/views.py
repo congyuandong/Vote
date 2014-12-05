@@ -48,6 +48,14 @@ def Contact(request):
 
 	return render_to_response('qdvote/contact.html',context_dict,context)
 
+
+#投票入口
+def VoteEntry(request):
+	context = RequestContext(request)
+	context_dict = {}
+
+	return render_to_response('qdvote/voteEntry.html',context_dict,context)
+
 def OnlineVote(request):
 	context = RequestContext(request)
 	context_dict = {}

@@ -10,7 +10,8 @@ var vote_id = -1;
 
 $(document).ready(function() {
   var len = $(".left").height();
-  len = (len > 500) ? len : 500;
+  var rlen = $(".right").height();
+  len = (len > rlen) ? len : rlen;
   $(".main").css("height", len);
   var lenr = $(".vright").height();
 	var lenl = $(".sidenav").height() + 60;

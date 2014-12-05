@@ -1,0 +1,23 @@
+{% extends "qdvote/base.html" %}
+{% load staticfiles %}
+{% block title %}在线投票{% endblock %}
+{% block body_block %}
+<div class="left">
+  <div class="channel">
+    <div class="sigletitle">在线投票</div>
+    <div class="content">
+      <p>“中国场外市场最具投资价值企业”评选活动由清大益讯和清华金融评论联合举办，对参选企业进行层级审核，分别通过前期材料审核、权威专家打分和网络票选，评选出场外市场“最具投资价值企业”和“最具发展企业”。</p>
+      <div class="ve cfix">
+        <h3>【最具投资价值企业：100家】</h3>
+        <p>中国场外市场“最具投资价值企业”</p>
+        <a href="/v/vote/" target='_blank' class="btn award1">最具投资价值企业</a>
+      </div>
+      <div class="ve cfix">
+        <h3>【最佳创新成长企业：100家】</h3>
+        <p>中国场外市场“最具发展企业”</p>
+        <a href="/v/vote/" target='_blank' class="btn award2">最佳创新成长企业</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

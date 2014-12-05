@@ -127,6 +127,7 @@ input[type="text"]:focus{
   margin-right: 8px;
   min-height: 500px;
   *height: 500px;
+  height: 100%;
 }
 .main .left .flow{
   padding: 18px 20px;
@@ -198,6 +199,38 @@ input[type="text"]:focus{
   margin-top: 20px;
   margin-bottom: 20px; 
 }
+.main .left .channel .content .ve{
+  width: 50%;
+  float: left;
+  text-align: center;
+  padding: 10px 0;
+}
+.main .left .channel .content .ve h3{
+  font-size: 16px;
+}
+.main .left .channel .content .ve .btn{
+  background-image: none;
+  padding: 20px 30px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: none;
+}
+.main .left .channel .content .ve .award1{
+  background-color: #cd61d1;
+}
+.main .left .channel .content .ve .award2{
+  background-color: #a2cc44;
+}
+.main .left .channel .content .ve .award1:hover,
+.main .left .channel .content .ve .award1:focus{
+  background-color: #e16ce5;
+}
+.main .left .channel .content .ve .award2:hover,
+.main .left .channel .content .ve .award2:focus{
+  background-color: #b5e54c;
+}
+
 .main .left .sigletitle{
   height: 59px;
   width: 736px;
@@ -394,12 +427,12 @@ input[type="text"]:focus{
 }
 .main .right .onlinevote{
   height: 73px;
-  margin: 0 6px;
+  margin: 0 6px 10px 6px;
   display: inline-block;
 }
 
 .main .right .sponsor{
-  margin:20px 6px;
+  margin:10px 6px;
   background-color: #fff;
   padding-bottom: 10px;
 }
@@ -565,7 +598,12 @@ input[type="text"]:focus{
 .vmain .vright .vbox li p .btn_vote:hover{
   background: url(../images/vbtn_a.png) bottom center no-repeat;
 }
-
+.vmain .vright .vbox li p .prebtn_vote{
+  float: right;
+  height: 30px;
+  width: 80px;
+  background: url(../images/pre_vbtn.png) bottom center no-repeat;
+}
 .vmain .vright .rtitle{
   height: 70px;
   background: url(../images/rtitle.png);
