@@ -27,7 +27,7 @@ class GlobalSetting(object):
 
 
 class JUDGEAdmin(object):
-	list_display = ['name','company','position','vote_type','sort']
+	list_display = ['name','company','position','sort']
 	search_fields = ['name']
 	list_editable = ['name', 'company', 'position','sort']
 

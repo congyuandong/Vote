@@ -84,12 +84,18 @@ $(document).ready(function() {
 	        success:function(data){
 	            status = data.status;
 	            if(status == 1){
-	            	alert('投票成功!感谢您的支持!');
+	            	//alert('投票成功!感谢您的支持!');
+	            	$('#alertMsg').text('投票成功!感谢您的支持!');
+	            	$('#alertModal').modal("show");
 	            	$('#vote_no_'+window.vote_id).text('票数:'+(parseInt($('#vote_no_'+window.vote_id).text().split(':')[1])+1));
 	            }else if(status == 0){
-	            	alert('验证码错误或已失效');
+	            	//alert('验证码错误或已失效');
+	            	$('#alertMsg').text('验证码错误或已失效');
+	            	$('#alertModal').modal("show");
 	            }else if(status == 2){
-	            	alert('该类型的奖项您已经投过票了，请勿重复投票');
+	            	$('#alertMsg').text('该类型的奖项您已经投过票了，请勿重复投票');
+	            	$('#alertModal').modal("show");
+	            	//alert('该类型的奖项您已经投过票了，请勿重复投票');
 	            }
 	        },
 	        error:function(date){
