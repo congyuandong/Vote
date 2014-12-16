@@ -344,6 +344,15 @@ input[type="text"]:focus{
 .listbox .s2 .lidetails p{
   color: #222;
 }
+.listbox .s3 p {
+  width: 177px;
+  height: 120px;
+  margin-bottom: 2px;
+  border: 1px solid #e9e9e9;
+}
+.listbox .s3 p img{
+  width: 160px;
+}
 
 .download{
   display: block;
@@ -446,9 +455,20 @@ input[type="text"]:focus{
   border-radius: 5px;
   background-color: #457ec3;
 }
-.main .right .sponsor img{
-  margin: 0 12px;
+.main .right .sponsor li{
+  padding: 0 10px;
+}
+.main .right .sponsor a{
+  height: 76px;
+  width: 214px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
   border-bottom: 1px solid #cacaca;
+}
+.main .right .sponsor a img{
+  max-width: 100%;
+  vertical-align: middle;
 }
 
 /* vote */
