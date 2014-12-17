@@ -1,6 +1,6 @@
-var voteYear = 2014;
-var voteMonth = 12;
-var voteDay = 31;
+var voteYear = 2015;
+var voteMonth = 1;
+var voteDay = 22;
 //左侧导航条偏移数量
 var offset_count = 0;
 //验证码发送间隔时间
