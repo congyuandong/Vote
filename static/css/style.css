@@ -46,7 +46,10 @@ input[type="text"]:focus{
   height: 84px;
   background: url(../images/nav_bg.png) repeat-x;
 }
-.header .nav{
+.header .navbar img{
+  float: left;
+}
+.header .navbar .nav{
   float: right;
 }
 .header .nav li{
