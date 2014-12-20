@@ -515,7 +515,7 @@ input[type="text"]:focus{
 }
 .vmain .vleft .sidenav li a{
   height: 100%;
-  width: 100px;
+  width: 111px;
   background: url(../images/snavli_bg.png) left repeat-x;
   display: inline-block;
   color: #61bfe7;
