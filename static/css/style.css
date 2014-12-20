@@ -269,6 +269,8 @@ input[type="text"]:focus{
   *font-family:Arial;/*防止非utf-8引起的hack失效问题，如gbk编码*/
 }
 .listbox .liimg p img {
+  max-width: 220px;
+  max-height: 128px;
   vertical-align: middle;
 }
 .listbox .lidetails h3{
