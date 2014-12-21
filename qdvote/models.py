@@ -23,7 +23,7 @@ class JUDGE(models.Model):
 		verbose_name_plural = '评委管理'
 
 class INDUSTRY(models.Model):
-	name = models.CharField(max_length=100,verbose_name='行业',help_text='七个字以内')
+	name = models.CharField(max_length=100,verbose_name='行业',help_text='不能超过8个汉字！')
 	sort = models.IntegerField(default=0,verbose_name='排序',help_text='小数在前')
 
 	def __unicode__(self):
