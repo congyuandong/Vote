@@ -74,7 +74,7 @@ input[type="text"]:focus{
   color: #ff9000;
 }
 .header .intro{
-  height: 360px;  
+  height: 260px;  
           /*Firefox*/  
      -moz-box-shadow: 0 5px 5px 0 rgba(4,0,0,0.2);  
     /*Safari,Chrome*/  
@@ -98,7 +98,7 @@ input[type="text"]:focus{
   padding: 5px 10px;
 }
 .header .intro .wrap p.first {
- margin-top: -30px;
+  margin-top: 30px;
 }
 /* banner */
 .bannerbar{ 
@@ -495,7 +495,7 @@ input[type="text"]:focus{
   width: 160px;
   position: absolute;
   left: 15px;
-  top: 790px;
+  top: 720px;
 }
 .vmain .vleft:before{
   content: " ";
