@@ -49,8 +49,8 @@ class COMPANY(models.Model):
 	industry = models.ForeignKey(INDUSTRY,verbose_name='行业分类')
 	sort = models.IntegerField(default=0,verbose_name='排序',help_text='小数在前')
 	vote = models.IntegerField(default=0,verbose_name='投票数')
-	image = ProcessedImageField(upload_to ='logo/',verbose_name='公司logo',help_text='225px*105px像素为宜，程序将自动剪裁',
-					processors=[ResizeToFill(225, 105)],format='JPEG')
+	image = ProcessedImageField(upload_to ='logo/',verbose_name='公司logo',help_text='200px*200px像素为宜，程序将自动剪裁',
+					processors=[ResizeToFill(200, 200)],format='JPEG')
 	detail = UEditorField(verbose_name='公司详细介绍',imagePath="ueditor/images/",
         filePath="ueditor/files/",settings=settings.UEDITOR_SETTINGS['config'],
 		upload_settings={'imageMaxSize':2048000},null=True,blank=True)
