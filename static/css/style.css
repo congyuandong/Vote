@@ -537,6 +537,7 @@ input[type="text"]:focus{
   color: #75bf2a;
 }
 .vmain .vright{
+  min-height: 400px;
   padding-bottom: 20px;
   padding-top: 10px;
 }
