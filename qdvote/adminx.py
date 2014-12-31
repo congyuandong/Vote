@@ -37,7 +37,7 @@ class INDUSTRYAdmin(object):
 	list_editable = ['name','sort']
 
 class COMPANYAdmin(object):
-	list_display = ['name','industry','vote_type','vote_status','video','vote','sort']
+	list_display = ['name','code','industry','vote_type','vote_status','video','vote','sort']
 	search_fields = ['name']
 	list_editable = ['name','industry','vote_type','vote_status','video','sort']
 	list_filter=['industry','vote_type','vote_status']

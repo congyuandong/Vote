@@ -70,7 +70,11 @@
         <a href="/v/detail/{{c.id}}" target="_blank">
           <img src="/media/{{c.image}}" />
         </a>
-        <h2>{{c.name}}</h2>
+        <!-- <h2>{{c.name}}</h2> -->
+        <p >
+          <span class="ccode">{{c.code}}</span>
+          <span class="cname">{{c.name}}</span>
+        </p>
         <p>
           <span id='vote_no_{{c.id}}'>票数:{{c.vote}}</span>
           {% if c.vote_status == 0%}

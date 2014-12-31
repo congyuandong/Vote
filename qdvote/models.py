@@ -45,6 +45,7 @@ VOTE_STATUS = (
 
 class COMPANY(models.Model):
 	name = models.CharField(max_length=200,verbose_name='公司名称')
+	code = models.CharField(max_length=200,verbose_name='股权代码')
 	industry = models.ForeignKey(INDUSTRY,verbose_name='行业分类')
 	sort = models.IntegerField(default=0,verbose_name='排序',help_text='小数在前')
 	vote = models.IntegerField(default=0,verbose_name='投票数')

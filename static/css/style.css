@@ -74,7 +74,8 @@ input[type="text"]:focus{
   color: #ff9000;
 }
 .header .intro{
-  height: 260px;  
+  /*height: 260px; */ 
+  padding-bottom: 15px;
           /*Firefox*/  
      -moz-box-shadow: 0 5px 5px 0 rgba(4,0,0,0.2);  
     /*Safari,Chrome*/  
@@ -581,19 +582,35 @@ input[type="text"]:focus{
   padding-left: 6px;
 }
 .vmain .vright .vbox li{
-  background: url(../images/vbox_bg.png) no-repeat;
+  /*background: url(../images/vbox_bg.png) no-repeat;*/
+  background-color: #f6f6f6;
+  *background-color: #f6f6f6;
+  background: -moz-linear-gradient(left, #fff, #eee);
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(#fff), to(#eee));
+  background: -webkit-linear-gradient(left, #fff, #eee);
+  background: -o-linear-gradient(left, #fff, #eee);
+  background: linear-gradient(to right, #fff, #eee);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1, startColorstr=#ffffff, endColorstr=#eeeeee);/*IE<9>*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=1, startColorstr=#ffffff, endColorstr=#eeeeee)";/*IE8+*/
+  border: 1px solid #ddd;
   float: left;
   width: 236px;
-  height: 210px;
+  height: 280px;
   margin-right: 15px;
   margin-top: 15px;
+     -moz-box-shadow: 0 3px 5px 0 rgba(4,0,0,0.2);  
+  -webkit-box-shadow: 0 3px 5px 0 rgba(4,0,0,0.2);  
+          box-shadow: 0 3px 5px 0 rgba(4,0,0,0.2);  
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=120, Color='#d3d3d3";  
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=120, Color='#d3d3d3');
 }
 .vmain .vright .vbox li:nth-child(4n){
   margin-right: 0;
 }
 .vmain .vright .vbox li a{
-  height: 115px;
-  width: 235px;
+  height: 200px;
+  width: 236px;
+  background-color:#fff; 
   display: table-cell;
   text-align: center;
   vertical-align: middle;
@@ -604,6 +621,8 @@ input[type="text"]:focus{
 } 
 .vmain .vright .vbox li a img{
   vertical-align: middle;
+  height: 200px;
+  width: 200px;
 }
 .vmain .vright .vbox li h2{
   height: 48px;
@@ -613,10 +632,23 @@ input[type="text"]:focus{
   margin: 0;
   color: #696969;
 }
+.vmain .vright .vbox li p .ccode,
+.vmain .vright .vbox li p .cname{
+  color: #696969;
+  width: 72px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.vmain .vright .vbox li p .ccode{
+  float: left;
+}
+.vmain .vright .vbox li p .cname{
+  float: right;
+}
 .vmain .vright .vbox li p{
   height: 30px;
   line-height: 30px;
-  padding: 0 20px 10px;
+  padding: 5px 10px;
 }
 .vmain .vright .vbox li p span{
   float: left;
