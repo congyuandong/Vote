@@ -142,12 +142,12 @@ input[type="text"]:focus{
   background: url(../images/flow.png) no-repeat;
 }
 .main .left .flow ul li{
-  width: 150px;
+  width: 200px;
   height: 32px;
   color: #fff;
   text-align: center;
   margin-top: 60px;
-  margin-right:31px;
+  margin-right:47px;
   float: left;
 }
 .main .left .flow ul li:last-child{
