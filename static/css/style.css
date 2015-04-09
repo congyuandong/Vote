@@ -636,7 +636,7 @@ input[type="text"]:focus{
 .vmain .vright .vbox li p .ccode,
 .vmain .vright .vbox li p .cname{
   color: #696969;
-  width: 72px;
+  /*width: 72px;*/
   white-space: nowrap;
   overflow: hidden;
 }
