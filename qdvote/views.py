@@ -62,7 +62,7 @@ def OnlineVote(request,v_type):
 	INDUSTRY_objs = INDUSTRY.objects.order_by('sort')
 	companys = []
 	for INDUSTRY_obj in INDUSTRY_objs:
-		company_list = COMPANY.objects.filter(industry__exact = INDUSTRY_obj,vote_type = v_type)
+		company_list = COMPANY.objects.filter(industry__exact = INDUSTRY_obj,vote_type = v_type).order_by('sort')
 		if company_list:
 			companys.append({'industry':INDUSTRY_obj,'company_list':company_list})
 	context_dict['companys'] = companys

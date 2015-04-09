@@ -43,6 +43,7 @@ class COMPANYAdmin(object):
 	list_filter=['industry','vote_type','vote_status']
 	style_fields  = {'detail':'ueditor'}
 	list_per_page = 20
+	ordering = ['sort']
 
 class RANDOMCODEAdmin(object):
 	list_display = ['tel','code','time','count']
